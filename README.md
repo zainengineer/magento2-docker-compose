@@ -1,5 +1,17 @@
 This docker-compose.yml file is provided by Mage Inferno
 
+## Custom Notes
+* Following changes are so you use do local modifications to the file
+  some section might not be needed but wrote it down to produce original functionality
+* uncomment `#- /var/www/html` and comment the next line in `docker-compose.yml`
+* this will create magento project in docker volume
+* Run `docker-compose run`
+* Test the access by `http://m2.localhost:8000/`
+* `Control-C` to stop docker
+* restore original `docker-compose.yml`
+* Run `sudo docker-compose run`
+* Run in a separate shell in this directory `sudo chown zain:zain share_code/ -R`
+
 ## Docker Hub
 
 View our Docker Hub images at [https://hub.docker.com/u/mageinferno/](https://hub.docker.com/u/mageinferno/)

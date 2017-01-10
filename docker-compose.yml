@@ -12,10 +12,14 @@ app:
     - 8000:80
 
 appdata:
+  #just (almost) empty image, to share volumes
   image: tianon/true
   volumes:
-    - /var/www/html
-#    - ~/.composer:/var/www/.composer
+    #- /var/www/html
+    - ./share_code:/var/www/html
+    - ~/.composer:/var/www/.composer
+    - ~/.config/composer:/var/www/.config/composer
+
 #    - ./html/app/code:/var/www/html/app/code
 #    - ./html/app/design:/var/www/html/app/design
 
@@ -39,6 +43,7 @@ db:
     - MYSQL_PASSWORD=magento2
 
 dbdata:
+  #just (almost) empty image, to share volumes
   image: tianon/true
   volumes:
     - /var/lib/mysql
