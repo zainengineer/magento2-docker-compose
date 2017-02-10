@@ -6,6 +6,8 @@ This docker-compose.yml file is provided by Mage Inferno
 * Test the access by `http://m2.localhost:8000/`
 * `Control-C` to stop docker
 * Run in a separate shell in this directory `sudo chown $USER:$USER share_code/ -R`
+
+
 ## Docker Hub
 
 View our Docker Hub images at [https://hub.docker.com/u/mageinferno/](https://hub.docker.com/u/mageinferno/)
