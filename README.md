@@ -2,11 +2,24 @@ This docker-compose.yml file is provided by Mage Inferno
 
 ## Custom Notes
 
-* Run `docker-compose run`
+* mkdir `share_code`
+* Run `sudo docker-compose run`
 * Test the access by `http://m2.localhost:8000/`
 * `Control-C` to stop docker
 * Run in a separate shell in this directory `sudo chown $USER:$USER share_code/ -R`
+* keep an eye on permission/owner of `~/.composer` and `~/.config` in your host machine and fix if they are owned by root
 
+## installing Docker
+
+* `sudo wget -qO- https://get.docker.com/ | sh`
+* `docker-compose` needs pip, on centos `sudo yum install python-pip`
+* `sudo pip install docker-compose`
+* `sudo service docker restart`
+
+## Managing docker
+
+* ssh using `docker exec -it magento2dockercompose_phpfpm_1 bash`
+   * to confirm the name use `sudo docker ps`
 
 ## Docker Hub
 
